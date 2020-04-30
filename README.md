@@ -3,8 +3,25 @@ Simple and fast bottom sheet for react-native. Built with **react-native-reanima
 
 **This library is compatible with Expo.**
   
+## Table of Contents
+- [react-native-bottom-sheet](#react-native-bottom-sheet)
+  * [Installation](#installation)
+  * [Setup](#setup)
+  * [Usage](#usage)
+  * [Props](#props)
+  * [Methods](#methods)
+    + [open()](#open--)
+    + [close()](#close--)
+  * [TODO](#todo)  
+  
 ## Installation  
-`npm install @vaicar/react-native-bottom-sheet`  
+```sh
+npm install @vaicar/react-native-bottom-sheet
+```
+or if you use yarn:
+```sh
+yarn add @vaicar/react-native-bottom-sheet`
+```
   
 If you are not using Expo, make sure to install [react-native-reanimated](https://www.npmjs.com/package/react-native-reanimated) and [react-native-gesture-handler](https://www.npmjs.com/package/react-native-gesture-handler)  .
   
