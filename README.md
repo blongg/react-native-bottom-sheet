@@ -13,51 +13,56 @@ If you want the bottom sheet to be in front of everything (like header, bottom t
 ```js  
 import { BottomSheetPortalHost } from '@vaicar/react-native-bottom-sheet';  
 <BottomSheetPortalHost>  
-    <Navigation ... />  
+   <Navigation ... />  
 </BottomSheetPortalHost>  
 ```
 ## Usage  
 ```js  
-import React from 'react';  
-import { View, TouchableOpacity, Text } from "react-native";  
-import BottomSheet from '@vaicar/react-native-bottom-sheet';  
-  
-export default class MyComponent extends React.Component {  
-  
-constructor(props){  
+import React from 'react';
+import { View, TouchableOpacity, Text } from 'react-native';
+import BottomSheet from '@vaicar/react-native-bottom-sheet';
+
+export default class MyComponent extends React.Component {
+
+  constructor(props) {
     super(props);
     this.bottomSheetRef = React.createRef();
-}  
+  }
 
-openBottomSheet = () => {
-	this.bottomSheetRef.current.open();
+  openBottomSheet = () => {
+    this.bottomSheetRef.current.open();
+  };
+
+  closeBottomSheet = () => {
+    this.bottomSheetRef.current.close();
+  };
+
+  render() {
+    return (
+      <View>
+        <TouchableOpacity
+          onPress={this.openBottomSheet}
+        >
+          <Text>Open bottom sheet</Text>
+        </TouchableOpacity>
+        <BottomSheet
+          closeOnDragDown
+          ref={this.bottomSheetRef}
+          height={400}
+          duration={200}
+          onClose={() => {
+            console.log('Bottom sheet closed!');
+          }}
+          onOpen={() => {
+            console.log('Bottom sheet opened!');
+          }}
+        >
+          <Text>Hello world!</Text>
+        </BottomSheet>
+      </View>
+    );
+  }
 }
-
-closeBottomSheet = () => {
-	this.bottomSheetRef.current.close();
-}
-
-render(){  
-	return (
-	<View>  
-	    <TouchableOpacity   
-	        onPress={this.openBottomSheet}  
-	    >
-	       <Text>Open bottom sheet</Text>
-	    </TouchableOpacity>  
-	    <BottomSheet   
-	        closeOnDragDown   
-	        ref={this.bottomSheetRef}  
-	        height={400}  
-	        duration={200}  
-	        onClose={() => { console.log("Bottom sheet closed!") }}  
-	        onOpen={() => { console.log("Bottom sheet opened!") }}  
-	    >  
-	        <Text>Hello world!</Text>  
-	    </BottomSheet>  
-	</View>)  
-	}  
-} 
 ```  
   
 **If you're not using BottomSheetPortalHost, make sure to set the property usePortal to false.**   
