@@ -5,9 +5,9 @@
  *
  */
 
-import * as React from 'react';
+import React, {Fragment} from 'react';
 import PortalConsumer from './PortalConsumer';
-import { PortalContext, PortalMethods } from './PortalHost';
+import {PortalContext, PortalMethods} from './PortalHost';
 
 type Props = {
     /**
@@ -19,10 +19,10 @@ type Props = {
 
 export default class Portal extends React.Component<Props> {
     render() {
-        const { children, enabled } = this.props;
+        const {children, enabled} = this.props;
 
-        if(!enabled)
-            return children;
+        if (!enabled)
+            return <Fragment>{children}</Fragment>
 
         return (
             <PortalContext.Consumer>
