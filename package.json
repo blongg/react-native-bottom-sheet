@@ -13,10 +13,14 @@
   "directories": {
     "example": "examples"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "bob build",
-    "prepublish": "tsc --noEmit"
+    "prepublish": "tsc --noEmit",
+    "release": "release-it"
   },
   "repository": {
     "type": "git",
@@ -49,6 +53,7 @@
     "@types/react-native": "^0.62.5",
     "react-native-gesture-handler": "^1.6.1",
     "react-native-reanimated": "^1.8.0",
+    "release-it": "^13.5.7",
     "typescript": "^3.8.3"
   },
   "@react-native-community/bob": {
