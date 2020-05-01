@@ -88,7 +88,7 @@ export default class MyComponent extends React.Component {
 | name                      | required | default | description |
 | ------------------------- | -------- | ------- | ------------|
 | height                | yes      |         | Bottom sheet's height |
-| duration                | no      |         | The open/close animation's duration (in ms)
+| duration                | no      |   300   | The open/close animation's duration (in ms)
 | closeOnDragDown                | no      |    true     | Closes the bottom sheet on drag down | |
 | closeOnPressMask                | no      |    true     | Closes the bottom sheet when the user clicks on the background mask | |
 | fadeMask                | no      |    true     | fade the background when bottom sheet is opened/closed or moved | |
