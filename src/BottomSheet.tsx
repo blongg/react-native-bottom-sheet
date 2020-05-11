@@ -114,7 +114,7 @@ type Props = {
     closeOnPressMask?: boolean,
     fadeMask: boolean,
     style?: ViewProps,
-    contentStyle: ViewProps,
+    contentStyle?: ViewProps,
     onClose?: () => void,
     onOpen?: () => void,
     usePortal: boolean,
@@ -137,7 +137,8 @@ export default class BottomSheet extends React.Component<Props, StateType> {
         onClose: null,
         onOpen: null,
         children: <View/>,
-        usePortal: true
+        usePortal: true,
+        contentStyle: null
     };
 
     private readonly clock = new Clock();
