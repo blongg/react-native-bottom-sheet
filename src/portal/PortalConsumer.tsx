@@ -40,9 +40,10 @@ export default class PortalConsumer extends React.Component<Props> {
     private checkManager() {
         if (!this.props.manager) {
             throw new Error(
-                'Looks like you forgot to wrap your root component with `Provider` component from `react-native-paper`.\n\n' +
-                "Please read our getting-started guide and make sure you've followed all the required steps.\n\n" +
-                'https://callstack.github.io/react-native-paper/getting-started.html'
+                'Looks like you forgot to wrap your root component with `BottomSheetPortalHost` component from `@vaicar/react-native-bottom-sheet`.\n\n' +
+                "Please read our Setup guide and make sure you've followed all the required steps.\n\n" +
+                'https://github.com/blongg/react-native-bottom-sheet#setup \n\n' +
+                'If you do not want to wrap your root component, set the usePortal prop to false.'
             );
         }
     }
