@@ -1,6 +1,6 @@
 {
   "name": "@vaicar/react-native-bottom-sheet",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple and fast bottom sheet for react-native",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
